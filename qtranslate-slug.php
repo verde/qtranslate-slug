@@ -2119,7 +2119,7 @@ class QtranslateSlug {
 					$item_class = array();
 					if ( (string)$q_config['language'] == (string)$lang ) $item_class[] = 'current-menu-item';
 					if ( $index == (count($languages) - 1) ) $item_class[] = 'last-child';
-					
+					$item_class[] = "lang-menu-item";
 					$item_class = empty($item_class) ? '' : ' class="' . implode(' ', $item_class) . '"';
 					
 					$language_name = ($args['short']) ? $lang : $q_config['language_name'][$lang];
