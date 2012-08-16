@@ -450,7 +450,7 @@ class QtranslateSlug {
 			add_action( 'init', array($this, 'taxonomies_hooks'), 805 );
 			
 			add_action( 'wp_dashboard_setup', array($this, 'remove_dashboard_widgets') );
-			add_action( 'admin_head', array($this, 'hide_quick_edit'), 600 );
+			
 			add_action( 'admin_init', array($this, 'fix_nav_menu') );
 			
 		} else {
@@ -1492,22 +1492,7 @@ class QtranslateSlug {
 		}
 	}
 	
-	
-	
-	/**
-	 * hide quickedit button ( functionality not supported by qTranslate )
-	 * 
-	 * @since 1.0
-	 */
-	public function hide_quick_edit() {
-		echo "<!-- QTS remove quick edit box -->" . PHP_EOL;
-		echo "<style type=\"text/css\" media=\"screen\">" . PHP_EOL;
-		echo "	.row-actions .inline.inline.hide-if-no-js { display: none !important }" . PHP_EOL;
-		echo "</style>" . PHP_EOL;
-	}
-	
-	
-	
+
 	/**
 	 * Hide auttomatically the wordpress slug blog in edit posts page
 	 *
